@@ -9,6 +9,11 @@
   width: max-content;
 }
 
+.menuBox[data-primary="false"] {
+  border-radius: 1.2em;
+  margin: 25vh 0;
+}
+
 .currentLocationBox {
   /*border: forestgreen solid 2px;*/
   display: flex;

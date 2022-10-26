@@ -1,0 +1,59 @@
+.modalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--modal-background);
+}
+
+.modalContent {
+    display: flex;
+    max-width: 80vw;
+
+}
+
+@media only screen and (max-width: 480px) {
+    .modalContent {
+        border: 3px solid blue;
+    }
+}
+
+.itemDetailsBox {
+    /*border: solid 2px deeppink;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+}
+
+.incrementBox {
+    border: solid 3px var(--bagel-button-background);
+    border-radius: 0.25rem;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.incrementBox button {
+    border-style: none;
+    margin: 0 1rem;
+    background-color: white;
+}
+
+.addToOrderBox {
+    display: flex;
+    gap: 1rem;
+}
+
+.orderButton {
+    border-style: none;
+    border-radius: 0.25rem;
+    padding: 0 3rem;
+    color: white;
+    background-color: var(--bagel-button-background);
+}

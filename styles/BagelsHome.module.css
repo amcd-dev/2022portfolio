@@ -1,0 +1,42 @@
+
+.backgroundImage {
+    display: flex;
+    background-image: url("../public/citystreet.jpg");
+    background-size: cover;
+
+    height: 100vh;
+}
+
+.test {
+    border: #805D93 solid 1px;
+}
+
+.orderBox {
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem ;
+    color: white;
+    background-color: var(--bagel-font-primary);
+    text-align: center;
+}
+
+.orderButtonsBox{
+    display: flex;
+
+}
+
+.orderButton {
+    border-style: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 2rem;
+    color: var(--bagel-font-primary);
+    background-color: white;
+}
+
+.aboutBox {
+    display: flex;
+    height: 40vh;
+}

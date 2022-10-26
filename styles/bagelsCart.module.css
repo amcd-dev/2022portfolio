@@ -1,0 +1,10 @@
+.cartMainBox {
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartTotalBox {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,35 @@
+.pageBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideImg {
+    /*border: solid 1px blue;*/
+    background-image: url("../public/grafittibanner.jpg");
+    background-size: cover;
+    width: 20vw;
+    min-height: 100vh;
+
+}
+
+.mainSelectionBox {
+
+}
+
+.itemDisplayBox {
+
+}
+
+.individualItemBox {
+    border: brown solid 1px;
+    display: flex;
+}
+
+.itemDescriptors {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderCartBox {
+
+}

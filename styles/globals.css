@@ -2,6 +2,9 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --bagel-font-primary: #E0777D;
+  --bagel-button-background: #42304B;
+  --modal-background: rgba(0,0,0,0.5);
 
 }
 

@@ -1,14 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { motion } from "framer-motion"
+import {useState} from "react";
 
 //Font awesome imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faLocationDot, faMapLocationDot} from "@fortawesome/free-solid-svg-icons";
 
+
+//component imports
 import MainButton from "../components/mainbutton";
 
+
 export default function Home() {
+
+    const [menuPrimaryView, setMenuPrimaryView] = useState(true)
+
+    function handleMoveNav() {
+        menuPrimaryView ? setMenuPrimaryView(false) : setMenuPrimaryView(true)
+    }
 
     return (
         <div>
@@ -20,35 +31,41 @@ export default function Home() {
             {/*          href="/favicon.ico"/>*/}
             {/*</Head>*/}
 
-            <div className ={styles.menuBox}>
+            <motion.div
+                className ={styles.menuBox}
+                data-primary={menuPrimaryView}
+                transition ={{type: "spring", stiffness: 45}}
+                layout
+            >
                 <h1>Andrew McDonald</h1>
                 <div className={styles.currentLocationBox}>
                     <h3><FontAwesomeIcon className={styles.icons} icon={faLocationDot} style={{ fontSize: 25, color: '9EBD6E'}} />Melbourne, Australia</h3>
                 </div>
-                <MainButton title={'My Story'}/>
-                <MainButton title={'Career Timeline'}/>
-                <MainButton title={'Detailed CV'}/>
-                <MainButton title={'Example Web Design'}/>
-                <MainButton title={'Digital Artwork'}/>
-                <MainButton title={'Get In Touch'}/>
-            </div>
+                <MainButton onClick={() => {handleMoveNav()}} title={'My Story'}/>
+                <MainButton onClick={() => {handleMoveNav()}} title={'Career Timeline'}/>
+                <MainButton onClick={() => {handleMoveNav()}} title={'Detailed CV'}/>
+                <MainButton onClick={() => {handleMoveNav()}} title={'Example Web Design'}/>
+                <MainButton onClick={() => {handleMoveNav()}} title={'Digital Artwork'}/>
+                <MainButton onClick={() => {handleMoveNav()}} title={'Get In Touch'}/>
+            </motion.div>
 
 
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-            <Image src="/vercel.svg"
-                   alt="Vercel Logo"
-                   width={72}
-                   height={16}/>
-          </span>
-                </a>
-            </footer>
+          {/*  <footer className={styles.footer}>*/}
+          {/*      <a*/}
+          {/*          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"*/}
+          {/*          target="_blank"*/}
+          {/*          rel="noopener noreferrer"*/}
+          {/*      >*/}
+          {/*          Powered by{' '}*/}
+          {/*          <span className={styles.logo}>*/}
+          {/*  <Image src="/vercel.svg"*/}
+          {/*         alt="Vercel Logo"*/}
+          {/*         width={72}*/}
+          {/*         height={16}/>*/}
+          {/*</span>*/}
+          {/*      </a>*/}
+          {/*  </footer>*/}
         </div>
     )
 }
+
